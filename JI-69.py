@@ -20,17 +20,15 @@ class MyApp:
 		self.button2.configure(text="2", background= "white")
 		self.button2.grid(row=0,column=1)
 		
-											
-		self.button1.bind("<Button-1>", self.button1Click)
+										
 
-                self.button2.bind("<Button-1>", self.button2Click)
-		  
 
 		drawpad.pack()
 		
 
 		
 myapp = MyApp(root)
+
 
 
 root.mainloop()
