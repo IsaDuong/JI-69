@@ -53,6 +53,11 @@ buttonplusslashminus = drawpad.create_rectangle(50,462.5,100,487.5, fill = 'whit
 buttonradicalx = drawpad.create_rectangle(50,425,100,450, fill = 'white')
 buttonrdownarrow = drawpad.create_rectangle(50,387.5,100,412.5, fill = 'white')
 buttonrslashs = drawpad.create_rectangle(50,350,100,375, fill= 'white')
+#Big Arrows
+buttonbigarrowup = drawpad.create_rectangle(287.5,337.5,337.5,363.5, fill = 'white')
+buttonbigarrowleft = drawpad.create_rectangle(237.5,350,275,400, fill = 'white')
+buttonbigarrowright = drawpad.create_rectangle(350,350,387.5,400, fill = 'white')
+buttonbigarrowdown = drawpad.create_rectangle(287.5,387.5,337.5,412.5, fill = 'white')
 
 
 
