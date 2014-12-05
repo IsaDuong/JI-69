@@ -85,6 +85,7 @@ class MyApp:
 		
 	def click(self, event):
             if drawpad.find_withtag(CURRENT):
+                
                 drawpad.itemconfig(CURRENT, fill="blue")
                 drawpad.update_idletasks()
                 drawpad.after(200)
