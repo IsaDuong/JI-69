@@ -46,18 +46,18 @@ buttonMODE = drawpad.create_rectangle(112.5,350,162.5,375, fill='white')
 
 buttonsigman = drawpad.create_rectangle(50,650,100,675, fill = 'white')
 buttonCLEAR = drawpad.create_rectangle(50,612.5,100,637.5, fill = 'white')
-buttonrightarrow = drawpad.create_rectangle(50,575,100,600, fill = 'white')
-buttonbuttonleftarrow = drawpad.create_rectangle(50,537.5,100,562.5, fill = 'white')
+buttonrightarrow = drawpad.create_rectangle(50,575,100,600, fill = '#3300FF')
+buttonleftarrow = drawpad.create_rectangle(50,537.5,100,562.5, fill = '#EDDF1A')
 buttonSERIES = drawpad.create_rectangle(50,500,100,525, fill = 'white')
 buttonplusslashminus = drawpad.create_rectangle(50,462.5,100,487.5, fill = 'white')
 buttonradicalx = drawpad.create_rectangle(50,425,100,450, fill = 'white')
 buttonrdownarrow = drawpad.create_rectangle(50,387.5,100,412.5, fill = 'white')
 buttonrslashs = drawpad.create_rectangle(50,350,100,375, fill= 'white')
 #Big Arrows
-buttonbigarrowup = drawpad.create_rectangle(287.5,337.5,337.5,363.5, fill = 'white')
-buttonbigarrowleft = drawpad.create_rectangle(237.5,350,275,400, fill = 'white')
-buttonbigarrowright = drawpad.create_rectangle(350,350,387.5,400, fill = 'white')
-buttonbigarrowdown = drawpad.create_rectangle(287.5,387.5,337.5,412.5, fill = 'white')
+buttonbigarrowup = drawpad.create_rectangle(287.5,337.5,337.5,363.5, fill = '#DCDCDE')
+buttonbigarrowleft = drawpad.create_rectangle(237.5,350,275,400, fill = '#DCDCDE')
+buttonbigarrowright = drawpad.create_rectangle(350,350,387.5,400, fill = '#DCDCDE')
+buttonbigarrowdown = drawpad.create_rectangle(287.5,387.5,337.5,412.5, fill = '#DCDCDE')
 
 
 
@@ -79,10 +79,17 @@ class MyApp:
 
 		
 										
-
+                drawpad.bind("<Button-1>", self.click)
 
 		drawpad.pack()
 		
+	def click(self, event):
+            if drawpad.find_withtag(CURRENT):
+                drawpad.itemconfig(CURRENT, fill="blue")
+                drawpad.update_idletasks()
+                drawpad.after(200)
+                drawpad.itemconfig(CURRENT, fill="white")
+
 myapp = MyApp(root)
 
 
